@@ -6,7 +6,6 @@ import { readFileSync } from 'fs'
 import path from 'path'
 import Link from 'next/link'
 import { Logos } from 'components/Icons.'
-import { Key } from 'react'
 import Dock from 'components/Dock'
 
 
@@ -23,7 +22,7 @@ export default function Home({apps,home}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main  className='flex flex-col md:flex-row flex-1 gap-4 md:gap-6 p-8 '>
+      <main  className='flex min-h-screen flex-col md:flex-row flex-1 gap-4 md:gap-6 p-8 '>
 
         <div className='flex flex-col gap-4 md:gap-6'>
           <div className='bg-white w-full md:w-72 rounded-lg shadow flex flex-col gap-4 items-center justify-center'>
@@ -74,21 +73,24 @@ export default function Home({apps,home}) {
               </Link>
             </div>
             <div className='text-center text-gray-400'>
-              <a href="https://github.com/AnoyiX" target="_blank">Anoyi</a> © 2023 All Rights Reserved
+              <a href="https://github.com/AnoyiX" target="_blank">Payegen</a> © 2023 All Rights Reserved
             </div>
           </div>
         </div>
-
-        <div className='bg-white rounded-lg shadow flex flex-row flex-wrap gap-10 p-8 h-full'>
-            {
-              apps.map( (item,index)=>(
-                <div key={index} className='flex flex-col items-center gap-3 cursor-pointer'>
-                  <img src={item.icon} alt=""  className='h-16 w-16'/>
-                  <span className='text-sm text-gray-800'>{item.name}</span>
-                </div>
-              ))
-            }
-        </div>        
+        
+        <div className="container bg-white rounded-lg shadow">
+          <div className='flex flex-row flex-wrap gap-8 p-8 '>
+              {
+                apps.map( (item,index)=>(
+                  <div key={index} className='flex flex-col items-center gap-3 cursor-pointer'>
+                    <img src={item.icon} alt=""  className='h-16 w-16'/>
+                    <span className='text-sm text-gray-800'>{item.name}</span>
+                  </div>
+                ))
+              }
+          </div> 
+        </div>
+               
       </main>
     </>
   )
