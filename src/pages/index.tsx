@@ -36,7 +36,7 @@ export default function Home({apps,home}) {
             <div className='flex flex-row gap-3 items-center justify-center text-lg border-t border-gray-200 py-3 w-full'>
               {
                 home.user.brands.map(item => (
-                  <a href={item.url} target="_blank" key={item.icon}>
+                  <a href={item.url} target="_blank" rel="noreferrer" key={item.icon}>
                     {
                      Logos[item.icon]({ className: 'text-xl text-gray-500/75 hover:text-gray-700' })
                     }
@@ -73,7 +73,7 @@ export default function Home({apps,home}) {
               </Link>
             </div>
             <div className='text-center text-gray-400'>
-              <a href="https://github.com/AnoyiX" target="_blank">Payegen</a> © 2023 All Rights Reserved
+              <a href="https://github.com/Payegen" target="_blank" rel="noreferrer">Payegen</a> © 2023 All Rights Reserved
             </div>
           </div>
         </div>
