@@ -54,8 +54,8 @@ export default function Home({apps,home}) {
             }
           </div>
 
-          <div className='md:flex hidden flex-col items-center space-y-2 text-gray-500 text-xs'>
-            <div className='flex flex-row space-x-1'>
+          <div className='md:flex  flex-col items-center space-y-2 text-gray-500 text-xs'>
+            <div className='flex flex-row space-x-1 justify-center'>
               <Link href='/doc/about'>
                 <span className="hover:text-blue-600 cursor-pointer">关于作者</span>
               </Link>
