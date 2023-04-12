@@ -7,12 +7,20 @@ import path from 'path'
 import Link from 'next/link'
 import { Logos } from 'components/Icons.'
 import Dock from 'components/Dock'
+import { useRouter } from 'next/router'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({apps,home}) {
-  
+  const router = useRouter()
+  const openApp = (url: string) => {
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      window.location.href = url
+    } else {
+      router.push(url)
+    }
+  }
   return (
     <>
       <Head>
@@ -54,7 +62,7 @@ export default function Home({apps,home}) {
             }
           </div>
 
-          <div className='md:flex  flex-col items-center space-y-2 text-gray-500 text-xs'>
+          <div className='md:flex hidden flex-col items-center space-y-2 text-gray-500 text-xs'>
             <div className='flex flex-row space-x-1 justify-center'>
               <Link href='/doc/about'>
                 <span className="hover:text-blue-600 cursor-pointer">关于作者</span>
@@ -78,11 +86,11 @@ export default function Home({apps,home}) {
           </div>
         </div>
         
-        <div className="container bg-white rounded-lg shadow">
+        <div className="bg-white rounded-lg shadow">
           <div className='flex flex-row flex-wrap gap-8 p-8 '>
               {
                 apps.map( (item,index)=>(
-                  <div key={index} className='flex flex-col items-center gap-3 cursor-pointer'>
+                  <div key={index} className='flex flex-col items-center gap-3 cursor-pointer' onClick={()=>{openApp(item.url)}}>
                     <img src={item.icon} alt=""  className='h-16 w-16'/>
                     <span className='text-sm text-gray-800'>{item.name}</span>
                   </div>
