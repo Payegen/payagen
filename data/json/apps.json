@@ -27,7 +27,7 @@
     {
         "name": "相册",
         "icon": "https://cdn.jsdelivr.net/gh/AnoyiX/cdn@main/apps/Photos.svg",
-        "url": "/photo"
+        "url": "/photos"
     },
     {
         "name": "Git 表情",
