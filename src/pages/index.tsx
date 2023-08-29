@@ -86,7 +86,7 @@ export default function Home({apps,home}) {
           </div>
         </div>
         
-        <div className="bg-white rounded-lg shadow">
+        <div className="bg-white rounded-lg shadow w-full">
           <div className='flex flex-row flex-wrap gap-8 p-8 '>
               {
                 apps.map( (item,index)=>(
