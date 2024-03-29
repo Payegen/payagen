@@ -10,7 +10,8 @@ export default function index(props) {
 
   function goPath(url:string,e:any){
     console.log(url,e);
-    window.location.href = url
+    // window.location.href = url
+    window.open(url)
   }
 
   return (
@@ -22,10 +23,10 @@ export default function index(props) {
       <div className="fullcontent">
         {
           freetime.map((item,index)=>(
-            <div key={item.name+index} className='w-1/4 text-center bg-white rounded-md pt-4'>
+            <div key={item.name+index} className='w-1/4 text-center bg-white rounded-md pt-4 mt-4'>
               <h3>{item.name}</h3>
               <p className='text-left indent-8'>{item.description}</p>
-              <button className='w-full text-right pr-4 mb-2 mt-2'
+              <button className='w-full text-right pr-4 mb-2 mt-2 hover:opacity-30'
                onClick={(e)=> goPath(item.url,e)}>go</button>
             </div>
           ))
