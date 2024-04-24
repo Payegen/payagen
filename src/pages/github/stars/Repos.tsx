@@ -1,7 +1,7 @@
 'use client'
 
 import { ForkIcon, IssueIcon, LicenseIcon, Loading, StarIcon } from "components/Icons."
-import { TRepo } from "./type"
+import { TRepo } from "../../../type/type"
 import { useEffect, useState } from "react"
 
 
