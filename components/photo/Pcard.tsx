@@ -1,13 +1,26 @@
 import React from 'react'
 
-export default function Pcard({name,url,click}) {
-  return (
-    <div className='w-[400px] h-[300px] border-spacing-1 rounded-lg mb-4 shadow-xl hover:shadow-lg' onClick={(e)=>{click(e,{name,url})}}>
-      <div className='h-full w-full border-t-2 text-center' >
-        
-        <img className=' h-3/4' src={url} alt="" />
+interface Props {
+  name: string
+  url: string
+  click: Function
+}
 
-        <div className='h-8 bg-title text-slate-500'>{name}</div>
+export default function Pcard({ name, url, click }: Props) {
+  return (
+    <div 
+      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+      onClick={(e) => click(e, { url })}
+    >
+      <div className="aspect-w-16 aspect-h-9 relative">
+        <img 
+          src={url} 
+          alt={name} 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="p-4">
+        <h3 className="text-lg font-medium text-gray-900">{name}</h3>
       </div>
     </div>
   )
