@@ -1,0 +1,13 @@
+:root,
+:root.light,
+/* 兼容处理在全局暗色模式下局部需要使用亮色模式如一些设置面板 */
+:root .light {
+    --my-color-my-bg: rgb(255, 255, 255);
+}
+
+/* 暗黑模式 */
+:root.dark,
+/* 兼容处理在全局亮色模式下，需要局部设置暗色模式 */
+:root .dark {
+     --my-color-my-bg: #000;
+}

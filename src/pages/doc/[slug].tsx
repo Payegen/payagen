@@ -10,7 +10,11 @@ import fs from 'fs'
 import path from 'path';
 import Head from 'next/head';
 import AppHeader from 'components/AppHeader'
-
+// import MarkdownEditor from 'components/MarkdownEditor'
+import dynamic from 'next/dynamic'
+const MarkdownEditor = dynamic(() => import('../../../components/MarkdownEditor'), {
+  ssr: false,
+})
 export default function doc( props) {
 
   console.log(props)
@@ -22,9 +26,9 @@ export default function doc( props) {
 
       <AppHeader title={props.title}></AppHeader>
       
-      <div className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 pt-4 px-4 rounded-md shadow'>
+      <div className='pt-4 px-4 rounded-md shadow bg-bgy1 markdown-body'>
           
-        {/* <h1 className='text-center mt-4 text-2xl'>{props.title}</h1> */}
+        <h1 className='text-center mt-2 text-2xl'>{props.title}</h1>
         
         <ReactMarkdown 
           children={props.content} 
@@ -49,6 +53,8 @@ export default function doc( props) {
             }
           }
         />
+
+        {/* <MarkdownEditor /> */}
           
       </div>
     </div>

@@ -1,17 +1,71 @@
 [
   {
-    "url":"https://payegen.com",
+    "url":"https://payegen.cn",
     "name":"payegen",
-    "description":"test"
+    "description":"test",
+    "type":"test",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
   },
   {
     "url":"https://www.yuque.com/cuggz/interview/pgw8v4#02fb1ce09342004ea0ec71aaca08fc75",
     "name":"前端面试题",
-    "description":"包括很多很多，react，vue,html,css,js三件套"
+    "description":"包括很多很多，react，vue,html,css,js三件套",
+    "type":"面试",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
   },
   {
     "url":"https://github.com/febobo/web-interview5",
     "name":"前端面试题2",
-    "description":"github上搜集的面试题"
+    "description":"github上搜集的面试题",
+    "type":"面试",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
+  },
+  {
+    "url":"https://www.linshi-email.com",
+    "name":"临时邮箱",
+    "description":"临时邮箱1",
+    "type":"工具",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
+  },
+  {
+    "url":"https://mail.cx/zh",
+    "name":"临时邮箱",
+    "description":"临时邮箱2",
+    "type":"工具",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
+  },
+  {
+    "url":"https://pan666.net",
+    "name":"阿里云盘资源",
+    "description":"一个阿里云盘资源共享站，可以搜索网盘资源～。电影，游戏。。。。。啥都有",
+    "type":"资源",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
+  }, 
+  {
+    "url":"https://github.com/qist/tvbox?tab=readme-ov-file",
+    "name":"影视仓+接口",
+    "description":"一个套壳软件+一个链接，解决了“数量”问题，基本可以做到在线观看所有你能搜出来名称的影视剧。安卓手机和Windows电脑其实也可以这么做。软件下载和配置链接合集",
+    "type":"资源",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
+  },
+  {
+    "url":"https://mxdm.tv",
+    "name":"动漫在线",
+    "description":"在线看动漫的",
+    "type":"动漫",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
+  },
+  {
+    "url":"https://komiic.com",
+    "name":"漫画",
+    "description":"非常好用，功能齐全，强推",
+    "type":"动漫",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
+  }, {
+    "url":"https://www.shinnku.com",
+    "name":"galgame",
+    "description":"手机电脑资源都很齐，而且不止有gal,大家自行探索",
+    "type":"资源",
+    "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
   }
 ]
