@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react'
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import Head from 'next/head'
 import AppHeader from 'components/AppHeader'
 import {readFileSync} from 'fs'
@@ -11,6 +11,8 @@ export default function index(props) {
   const [loading, setLoading] = useState(false)
   const [selectedType, setSelectedType] = useState('全部')
   const [hasMore, setHasMore] = useState(true)
+  const [activeTabPosition, setActiveTabPosition] = useState({ left: 0, width: 0 })
+  const tabsRef = useRef<{ [key: string]: HTMLButtonElement }>({})
 
   // 提取所有唯一的类型
   const types = useMemo(() => {
@@ -82,12 +84,35 @@ export default function index(props) {
     window.open(url)
   }
 
+  // 更新选中标签的位置
+  const updateActiveTabPosition = useCallback((type: string) => {
+    const activeTab = tabsRef.current[type]
+    if (activeTab) {
+      const { offsetLeft, offsetWidth } = activeTab
+      setActiveTabPosition({
+        left: offsetLeft,
+        width: offsetWidth,
+      })
+    }
+  }, [])
+
+  // 初始化和窗口大小改变时更新位置
+  useEffect(() => {
+    updateActiveTabPosition(selectedType)
+    
+    const handleResize = () => {
+      updateActiveTabPosition(selectedType)
+    }
+    
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [selectedType, updateActiveTabPosition])
+
   // 优化类型切换
   const handleTypeChange = useCallback((type: string) => {
     setSelectedType(type)
-    setVisibleItems(9) // 重置为9条
+    setVisibleItems(9)
     setHasMore(true)
-    // 滚动到顶部
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
@@ -109,19 +134,32 @@ export default function index(props) {
       <Head><title>摸鱼推荐</title></Head>
       <AppHeader title='摸鱼推荐'></AppHeader>
 
-      
-
-      <div className="w-full -ml-6"> {/* 增加负边距到 24px */}
+      <div className="w-full -ml-6">
         {/* 类型标签栏 */}
-        <div className="flex flex-wrap gap-2 ml-6 mt-4 mb-6">
+        <div className="relative flex flex-wrap gap-2 ml-6 mt-4 mb-6">
+          {/* 背景滑块 */}
+          <div 
+            className="absolute transition-all duration-300 ease-out bg-blue-500 rounded-full"
+            style={{
+              left: activeTabPosition.left,
+              width: activeTabPosition.width,
+              height: '100%',
+              transform: 'translateX(0)',
+              zIndex: 0,
+            }}
+          />
+          
           {types.map(type => (
             <button
               key={type}
+              ref={el => {
+                if (el) tabsRef.current[type] = el
+              }}
               onClick={() => handleTypeChange(type)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200
+              className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
                 ${selectedType === type 
-                  ? 'bg-blue-500 text-white' 
-                  : 'bg-white text-gray-600 hover:bg-gray-100'}`}
+                  ? 'text-white' 
+                  : 'text-gray-600 hover:text-gray-900'}`}
             >
               {type}
             </button>
