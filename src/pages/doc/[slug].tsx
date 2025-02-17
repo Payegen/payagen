@@ -10,11 +10,7 @@ import fs from 'fs'
 import path from 'path';
 import Head from 'next/head';
 import AppHeader from 'components/AppHeader'
-// import MarkdownEditor from 'components/MarkdownEditor'
-import dynamic from 'next/dynamic'
-const MarkdownEditor = dynamic(() => import('../../../components/MarkdownEditor'), {
-  ssr: false,
-})
+
 export default function doc( props) {
 
   console.log(props)
