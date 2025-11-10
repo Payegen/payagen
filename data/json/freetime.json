@@ -67,5 +67,47 @@
     "description":"手机电脑资源都很齐，而且不止有gal,大家自行探索",
     "type":"资源",
     "iconimg":"https://komiic.com/assets/logo-black-C0aYFeLm.svg"
+  }, {
+    "url":"https://bloxd.io",
+    "name":"Bloxd.io - Play Free Online Games!",
+    "description":"「我的世界」风格游戏网站，20+ Minecraft 知名小游戏。比如起床战争、空岛战争、生存、建筑大赛、躲猫猫、跑酷等。联网模式，打开后自动加入房间匹配，无需安装，打开浏览器就能玩。",
+    "type":"摸鱼",
+    "iconimg":"https://imgheybox.max-c.com/web/bbs/2025/02/28/9e9567b2d44e9f9740b897d11536ebdf/thumb.png?imageMogr2/format/webp/quality/75/auto-orient/ignore-error/1"
+  }, {
+    "url":"https://s.gd-share.cn/4nNI",
+    "name":"【在线PS】PS软件网页版",
+    "description":"如果你想 P 图但是没有安装 PhotoShop，就可以用这个在线版 PS。无需安装软件，任何平台只要有浏览器，网页版打开即用，响应快速，PS 上常用的功能基本都有，日常使用完全足够了。网站速度和流畅度都不错，需要登录使用。",
+    "type":"摸鱼",
+    "iconimg":"https://imgheybox.max-c.com/web/bbs/2025/02/28/6727c1fd9879e942dc07deef49ec214a/thumb.png?imageMogr2/format/webp/quality/75/auto-orient/ignore-error/1"
+  }, {
+    "url":"https://dialogue.moe",
+    "name":"Dialogue.moe",
+    "description":"一个数据非常丰富的“以词搜番”网站。收录了 7700+ 部带字幕的动漫和 6500万+ 台词对话。只要输入台词，就能搜出含有这句台词的动漫剧集，而且能精确到第几集、几分钟。用来找素材或者找动漫非常给力。界面虽然是英文的，但可以直接输入中文搜索。",
+    "type":"资源",
+    "iconimg":"https://imgheybox.max-c.com/web/bbs/2025/02/28/c481b2aa419fbce5b757a545d2a646c7/thumb.png?imageMogr2/format/webp/quality/75/auto-orient/ignore-error/1"
+  }, {
+    "url":"https://regex.ai",
+    "name":"Regex.ai",
+    "description":"如果有写正则表达式的需求，那这个网站绝对让你眼前一亮。利用 AI 写正则表达式，我们只要选择想要筛选的内容，就能自动生成对应的正则表达式和效果预览。直接复制就行了，小白也能快速上手，简直神器！",
+    "type":"工具",
+    "iconimg": "https://imgheybox.max-c.com/web/bbs/2025/02/28/6f0eecda758b093b656f90d158fb7f17/thumb.png?imageMogr2/format/webp/quality/75/auto-orient/ignore-error/1"
+  }, {
+    "url":"https://fuun.fun",
+    "name":"奇趣网站收藏家",
+    "description":"一个小游戏网站，收集了 1000+ 游戏，各种类型、风格都有。而且有别于 4399 等传统游戏网站，这里的内容大多是独立在线游戏，比较有趣、新奇、有创意、甚至沙雕。用来打发时间很不错！",
+    "type":"摸鱼",
+    "iconimg":"https://imgheybox.max-c.com/web/bbs/2025/02/28/81f821c26394452e7da8d6b01a9be6d6/thumb.png?imageMogr2/format/webp/quality/75/auto-orient/ignore-error/1"
+  }, {
+    "url":"https://www.virustotal.com",
+    "name":"VirusTotal",
+    "description":"对网上下载的软件、压缩包等文件不放心、担心有病毒？可以用这个多引擎在线病毒检测系统。同时使用60+个反病毒引擎对可疑文档进行分析，在线查毒，保证电脑安全。",
+    "type":"工具",
+    "iconimg":"https://imgheybox.max-c.com/web/bbs/2025/02/28/d92166045ec66f00d6085f38160294a0/thumb.png?imageMogr2/format/webp/quality/75/auto-orient/ignore-error/1"
+  }, {
+    "url":"https://www.ypppt.com",
+    "name":"优品PPT",
+    "description":"免费的 PPT 模板下载网站，无需登录，想用哪个模板直接就能下载。包含了 PPT 模板、背景、图表、素材、教程和字体各种 PPT 相关资料，非常方便。",
+    "type":"工具",
+    "iconimg": "https://imgheybox.max-c.com/web/bbs/2025/02/28/5e926cd23f0d0d46bd8b5e95ebe7bce2/thumb.png?imageMogr2/format/webp/quality/75/auto-orient/ignore-error/1"
   }
 ]
