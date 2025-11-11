@@ -38,10 +38,5 @@
         "name": "摸鱼学习",
         "icon": "https://cdn.jsdelivr.net/gh/AnoyiX/cdn@main/apps/CNCF.svg",
         "url": "/freetime"
-    },
-    {
-        "name": "后台",
-        "icon": "https://cdn.jsdelivr.net/gh/AnoyiX/cdn@main/apps/CNCF.svg",
-        "url": "/backpage"
     }
 ]
