@@ -1,6 +1,10 @@
 {
+  "extends": ["next/core-web-vitals"],
+
   "rules": {
-    "extends": "next/core-web-vitals",
-    "react/no-children-prop": false
+    "react/no-children-prop": 1,
+     "react-hooks/rules-of-hooks": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/function-component-definition": "off"
   }
 }

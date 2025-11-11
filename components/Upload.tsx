@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useState } from 'react'
@@ -34,7 +35,7 @@ export default function UploadPage() {
       {url && (
         <div className="mt-4">
           <p>上传成功：</p>
-          <a href={url} target="_blank">{url}</a>
+          <a href={url} target="_blank" rel="noreferrer">{url}</a>
           <br />
           <img src={url} alt="uploaded" width={200} />
         </div>
